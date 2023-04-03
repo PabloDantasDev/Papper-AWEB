@@ -37,7 +37,7 @@
             	   </div>
             	</div>
             	
-            	<input type="submit" class="btn" value="Login">
+            	<input type="submit" class="btn" ><a href="views/home.php">LOGIN</input>
             </form>
         </div>
     </div>
