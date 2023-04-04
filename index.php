@@ -28,8 +28,8 @@ require('database/conn.php');
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input type="text" class="input">
+           	
+           		   		<input type="text" placeholder="Usuario" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
