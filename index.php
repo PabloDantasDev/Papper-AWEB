@@ -37,8 +37,8 @@ require('database/conn.php');
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Senha</h5>
-           		    	<input type="password" class="input">
+           		    	
+           		    	<input type="password" placeholder="Senha" class="input">
             	   </div>
             	</div>
             	
