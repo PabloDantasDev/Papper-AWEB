@@ -1,6 +1,6 @@
 <?php
 
-require('conn.php')
+require('../database/conn.php')
 
 ?>
 <!DOCTYPE html>
@@ -24,15 +24,15 @@ require('conn.php')
 		
 
 
-				<h2 class="title">cadastre-se!</h2>
+				<h2 class="title">Bem Vindo!</h2>
 
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input type="text" name="username" placeholder="" class="input">
+           		   		
+           		   		<input type="text" name="username"  placeholder="Usuario" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -40,45 +40,51 @@ require('conn.php')
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Senha</h5>
-           		    	<input type="password" name="password" placeholder="" class="input">
+           		   
+           		    	<input type="password" name="password"  placeholder="Senha" class="input">
             	   </div>
             	</div>
 				<?php
 
 
 
-// Verifica se o formulário de cadastro foi enviado
-if (isset($_POST['cadastrar'])) {
-	$username = strip_tags($_POST['username']);
-	$password = strip_tags($_POST['password']);
+if (isset($_POST['cadastro'])) {
+	
 
-  // Verifica se o usuário já existe no banco de dados
-  $sql = "SELECT * FROM usuarios WHERE nome='$username'";
+header('Location: cadastro.php');
+
+}
+
+// Verifica se o formulário de login foi enviado
+if (isset($_POST['login'])) {
+  $username = strip_tags($_POST['username']);
+  $password = strip_tags($_POST['password']);
+
+  // Consulta o banco de dados para verificar as credenciais do usuário
+  $sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
   $result = $conn->query($sql);
 
-  if ($result->num_rows > 0 ) {
-    // Usuário já cadastrado
-    echo "Usuário já cadastrado.";
-
+  if ($result->num_rows == 1) {
+    // Login bem-sucedido
+    echo "Login efetuado com sucesso!";
+	header('Location: home.php');
   } else {
-    // Insere o novo usuário no banco de dados
-    $sql = "INSERT INTO usuarios (nome,senha) VALUES ('$username', '$password')";
-    if ($conn->query($sql) === TRUE) {
-      echo "Usuário cadastrado com sucesso!";
-	  
-    } else {
-      echo "Erro ao cadastrar usuário: ";
-    }
+    // Login falhou
+    echo "Usuário ou senha inválidos.";
   }
 }
 
+
+
 $conn->close();
 ?>
-            	
-            	<input type="submit" name="cadastrar"  value="CADASTRAR">
-            	<a href="../index.php">FAÇA LOGIN</a>
+            	<div class="box">
+					
+            	<input type="submit" class="btn" name="login"  value="Login">
+            	<input type="submit" class="btn" name="cadastro"  value="Cadastre-Se">
 				
+				</div>
+
             </form>
         </div>
     </div>

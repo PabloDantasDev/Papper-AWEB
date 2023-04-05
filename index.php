@@ -1,8 +1,4 @@
-<?php
 
-require('database/conn.php')
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +27,8 @@ require('database/conn.php')
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input type="text" name="username" class="input">
+           		   		
+           		   		<input type="text" name="username"  placeholder="Usuario" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -40,38 +36,24 @@ require('database/conn.php')
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Senha</h5>
-           		    	<input type="password" name="password"  class="input">
+           		   
+           		    	<input type="password" name="password"  placeholder="Senha" class="input">
             	   </div>
             	</div>
+			
 				<?php
 
-// Verifica se o formulário de login foi enviado
-if (isset($_POST['login'])) {
-  $username = strip_tags($_POST['username']);
-  $password = strip_tags($_POST['password']);
+					require('database/valida.php');
+				
+				?>	
 
-  // Consulta o banco de dados para verificar as credenciais do usuário
-  $sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
-  $result = $conn->query($sql);
+            	<div class="box">
+					
+            	<input type="submit" class="btn" name="login"  value="Login">
+            	<input type="submit" class="btn" name="cadastro"  value="Cadastre-Se">
+				
+				</div>
 
-  if ($result->num_rows == 1) {
-    // Login bem-sucedido
-    echo "Login efetuado com sucesso!";
-	header('Location: views/home.php');
-  } else {
-    // Login falhou
-    echo "Usuário ou senha inválidos.";
-  }
-}
-
-
-
-$conn->close();
-?>
-            	
-            	<input type="submit" name="login"  value="Login">
-				<a href="database/cadastro.php">CADASTRE-SE</a>
             </form>
         </div>
     </div>
