@@ -50,14 +50,14 @@ require('conn.php')
 
 // Verifica se o formulário de cadastro foi enviado
 if (isset($_POST['cadastrar'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+	$username = strip_tags($_POST['username']);
+	$password = strip_tags($_POST['password']);
 
   // Verifica se o usuário já existe no banco de dados
   $sql = "SELECT * FROM usuarios WHERE nome='$username'";
   $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
+  if ($result->num_rows > 0 ) {
     // Usuário já cadastrado
     echo "Usuário já cadastrado.";
 
