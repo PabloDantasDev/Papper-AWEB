@@ -52,46 +52,26 @@ if (isset($_POST['login'])) {
   $password = strip_tags($_POST['password']);
 
   // Consulta o banco de dados para verificar as credenciais do usuário
-  $sql = "SELECT * FROM cadastro WHERE nome='$username' AND senha='$password'";
+  $sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
   $result = $conn->query($sql);
 
   if ($result->num_rows == 1) {
     // Login bem-sucedido
     echo "Login efetuado com sucesso!";
+	header('Location: views/home.php');
   } else {
     // Login falhou
     echo "Usuário ou senha inválidos.";
   }
 }
 
-// Verifica se o formulário de cadastro foi enviado
-if (isset($_POST['cadastro'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
 
-  // Verifica se o usuário já existe no banco de dados
-  $sql = "SELECT * FROM usuario WHERE nome='$username'";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    // Usuário já cadastrado
-    echo "Usuário já cadastrado.";
-  } else {
-    // Insere o novo usuário no banco de dados
-    $sql = "INSERT INTO usuario (nome,senha) VALUES ('$username', '$password')";
-    if ($conn->query($sql) === TRUE) {
-      echo "Usuário cadastrado com sucesso!";
-    } else {
-      echo "Erro ao cadastrar usuário: " . $conn->error;
-    }
-  }
-}
 
 $conn->close();
 ?>
             	
             	<input type="submit" name="login"  value="Login">
-				<input type="submit" name="cadastro"  value="Cadastro">
+				<a href="database/cadastro.php">CADASTRE-SE</a>
             </form>
         </div>
     </div>
