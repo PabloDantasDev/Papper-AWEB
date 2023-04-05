@@ -1,4 +1,8 @@
+<?php
 
+require('database/conn.php')
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +13,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	
-
 
 	<img class="wave" src="img/wave.png">
 	<div class="container">
@@ -20,11 +22,10 @@
 		<div class="login-content">
 			<form id="casdastro-form" method="post">
 		
-<<<<<<< HEAD
-				<h2 class="title">Bem vindoo</h2>
-=======
-				<h2 class="title">bem Vindo!</h2>
->>>>>>> de4d1396f7065a37b27ebee61567a118e9b439ac
+
+
+				<h2 class="title">Bem Vindo!</h2>
+
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -44,19 +45,6 @@
             	   </div>
             	</div>
 				<?php
-// Configuração do banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "usuarios";
-
-// Cria a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verifica se a conexão foi estabelecida corretamente
-if ($conn->connect_error) {
-  die("Erro ao conectar ao banco de dados: " . $conn->connect_error);
-}
 
 // Verifica se o formulário de login foi enviado
 if (isset($_POST['login'])) {
@@ -82,7 +70,7 @@ if (isset($_POST['cadastro'])) {
   $password = $_POST['password'];
 
   // Verifica se o usuário já existe no banco de dados
-  $sql = "SELECT * FROM cadastro WHERE nome='$username'";
+  $sql = "SELECT * FROM usuario WHERE nome='$username'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -90,7 +78,7 @@ if (isset($_POST['cadastro'])) {
     echo "Usuário já cadastrado.";
   } else {
     // Insere o novo usuário no banco de dados
-    $sql = "INSERT INTO cadastro (nome,senha) VALUES ('$username', '$password')";
+    $sql = "INSERT INTO usuario (nome,senha) VALUES ('$username', '$password')";
     if ($conn->query($sql) === TRUE) {
       echo "Usuário cadastrado com sucesso!";
     } else {
