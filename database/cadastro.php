@@ -32,7 +32,7 @@ require('conn.php')
            		   </div>
            		   <div class="div">
            		   		<h5>Usuario</h5>
-           		   		<input type="text" name="username" class="input">
+           		   		<input type="text" name="username" placeholder="" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -41,7 +41,7 @@ require('conn.php')
            		   </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input type="password" name="password" class="input">
+           		    	<input type="password" name="password" placeholder="" class="input">
             	   </div>
             	</div>
 				<?php
@@ -68,7 +68,7 @@ if (isset($_POST['cadastrar'])) {
       echo "Usuário cadastrado com sucesso!";
 	  
     } else {
-      echo "Erro ao cadastrar usuário: " . $conn->error;
+      echo "Erro ao cadastrar usuário: ";
     }
   }
 }

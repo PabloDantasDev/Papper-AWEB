@@ -41,7 +41,7 @@ require('database/conn.php')
            		   </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input type="password" name="password" class="input">
+           		    	<input type="password" name="password"  class="input">
             	   </div>
             	</div>
 				<?php
