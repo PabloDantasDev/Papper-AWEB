@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	
 	<title>Animated Login Form</title>	
-	<link rel="stylesheet" href="">
-
+	<link rel="stylesheet" href="./css/novoStyle.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -13,71 +11,71 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
 </head>
 <body>
-	<div class="container">
-		<div class="img">
+<div class="container">
+
+<header>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand p-3" href="/">
+				<img src="caminho-da-img" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#sobre">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a id="servicosbtn" class="nav-link" href="#servicos">Serviços</a>
+					</li>
+					<li class="nav-item">
+						<a id="contatosbtn" class="btn btn-primary btn-contato nav-link" href="/views/loginFuncionario.php" role="button">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<div class="text-center">
+		<div class="logo-principal">
 			<img src="img/g1.png">
 		</div>
-		<div class="login-content">
-			<form id="casdastro-form" method="post">
-		
+		<h2>
+		Texto em destaque aqui a baixo da imagem!
+		</h2>
+		<p>
+			Texto falando um pouco sobre o nosso restaurante!
+		</p>
+		<div class="menu-botao">
+			<p>
+				<a href="#" class="btn btn-secondary">Botão 1</a>
+			</p>
+			<p>
+				<a href="#" class="btn btn-secondary">Botão 2</a>
+			</p>
+			<p>
+				<a href="#" class="btn btn-secondary">Botão 3</a>
+			</p>
+		</div>
+	</div>
+</main>
 
+<footer>
+	<div class="text-center">
+		<p>
+			Site papper <a href="https://portal.uniasselvi.com.br/">UNIASSELVI</a>, feito pelos <a href="#">Alunos(as)</a>.
+		</p>
+	</div>
+</footer>
 
-				<h2 class="title">Bem Vindo!</h2>
-
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Usuario</h5>
-           		   		<input type="text" name="username" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Senha</h5>
-           		    	<input type="password" name="password" class="input">
-            	   </div>
-            	</div>
-				<?php
-
-// Verifica se o formulário de login foi enviado
-if (isset($_POST['login'])) {
-  $username = strip_tags($_POST['username']);
-  $password = strip_tags($_POST['password']);
-
-  // Consulta o banco de dados para verificar as credenciais do usuário
-  $sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows == 1) {
-    // Login bem-sucedido
-    echo "Login efetuado com sucesso!";
-	header('Location: views/home.php');
-  } else {
-    // Login falhou
-    echo "Usuário ou senha inválidos.";
-  }
-}
-
-
-
-$conn->close();
-?>
-            	
-            	<input type="submit" name="login"  value="Login">
-				<a href="database/cadastro.php">CADASTRE-SE</a>
-            </form>
-        </div>
-    </div>
-    <script type="text/javascript" src="../js/main.js"></script>
-
-	
 </body>
 </html>

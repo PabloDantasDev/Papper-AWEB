@@ -1,8 +1,3 @@
-<?php
-
-require('database/conn.php')
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,124 +16,67 @@ require('database/conn.php')
 </head>
 <body>
 	<div class="container">
-
-		<header>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    		<div class="container">
-				<a class="navbar-brand p-3" href="/">
-					<img src="caminho-da-img" alt="logo">
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-    			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="/">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#sobre">Sobre</a>
-						</li>
-						<li class="nav-item">
-							<a id="servicosbtn" class="nav-link" href="#servicos">Serviços</a>
-						</li>
-						<li class="nav-item">
-							<a id="contatosbtn" class="btn btn-primary btn-contato nav-link" href="#contatos" role="button">Login</a>
-						</li>
-					</ul>
-				</div>
-    		</div>
-		</nav>
-		</header>
-		
-		<main>
-			<div class="text-center">
-			
+		<div class="img">
 			<img src="img/g1.png">
-
-			<h1>
-				aqui sera um h1 de destaque ou titulo do texto!
-			</h1>
-			<p>
-				aqui e um paragrafo de texto onde ficara algumas informaçoes!
-			</p>
-			<p>
-				<a href="" class="btn btn-lg btn-secondary">botão</a>
-			</p>
-			</div>	
-			
-
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-sm">
-						
-
-					<form method="post" id="casdastro-form">
-						<h2>Bem Vindo!</h2>
-						<div class="row">
-							<div class="col-4">
-								<label>Usuario:</label>
-								<input type="text" class="form-control" name="username">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-4">
-								<label>Senha:</label>
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<?php
-
-						// Verifica se o formulário de login foi enviado
-						if (isset($_POST['login'])) {
-							$username = strip_tags($_POST['username']);
-							$password = strip_tags($_POST['password']);
-
-							// Consulta o banco de dados para verificar as credenciais do usuário
-							$sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
-							$result = $conn->query($sql);
-
-							if ($result->num_rows == 1) {
-								// Login bem-sucedido
-								echo "Login efetuado com sucesso!";
-								header('Location: views/home.php');
-							} else {
-								// Login falhou
-								echo "Usuário ou senha inválidos.";
-							}
-						}
-
-						$conn->close();
-
-						?>
-            	
-						<br>
-						<input type="submit" name="login" value="Login">
-						<br>
-						<a href="database/cadastro.php">CADASTRE-SE</a>
-					</form>
+		</div>
+		<div class="login-content">
+			<form id="casdastro-form" method="post">
+		
 
 
-					</div>
-					
-				</div>
-			
-				<script type="text/javascript" src="../js/main.js"></script>
+				<h2 class="title">Bem Vindo!</h2>
 
-			</div>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Usuario</h5>
+           		   		<input type="text" name="username" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Senha</h5>
+           		    	<input type="password" name="password" class="input">
+            	   </div>
+            	</div>
+            	<input type="submit" name="login"  value="Login">
+				<a href="database/cadastro.php">CADASTRE-SE</a>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/main.js"></script>
 
-		</main>
-
-		<footer>
-			<div class="text-center mt-auto">
-				<p>
-					Site papper UNIASSELVI, feito pelos alunos(as).
-				</p>
-			</div>
-		</footer>
-
-	</div>
 </body>
+
+<?php
+
+require('./database/conn.php');
+
+// Verifica se o formulário de login foi enviado
+if (isset($_POST['login'])) {
+	$username = strip_tags($_POST['username']);
+  	$password = strip_tags($_POST['password']);
+
+	// Consulta o banco de dados para verificar as credenciais do usuário
+	$sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
+	$result = $conn->query($sql);
+
+  	if ($result->num_rows == 1) {
+		// Login bem-sucedido
+		echo "Login efetuado com sucesso!";
+		header('Location: views/home.php');
+  	} else {
+		// Login falhou
+		echo "Usuário ou senha inválidos.";
+	}
+}
+
+$conn->close();
+?>
+
 </html>
