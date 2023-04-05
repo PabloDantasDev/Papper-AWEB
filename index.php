@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
 	header('Location: views/home.php');
   } else {
     // Login falhou
-    echo "Usuário ou senha inválidos..";
+    echo "Usuário ou senha inválidos.";
   }
 }
 
