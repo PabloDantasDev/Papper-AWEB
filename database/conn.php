@@ -3,7 +3,11 @@
 // Configuração da conexão
 $servername = "localhost"; // nome do servidor
 $username = "root"; // nome de usuário do banco de dados
-$password = ""; // senha do banco de dados
+
+//$password = ""; // senha do banco de dados
+$password = "621071"; // senha do banco de dados
+
+
 $dbname = "papper_web"; // nome do banco de dados
 
 // Criar uma conexão
