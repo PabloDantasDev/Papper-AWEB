@@ -17,7 +17,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Não foi possível conectar ao banco de dados. Erro: " . mysqli_connect_error());
 } else {
-    echo "CONEXÃO REALIZADA COM SUCESSO";
+
   
 }
 
