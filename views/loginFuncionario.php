@@ -4,7 +4,7 @@
 <html>
 <head>
 	
-	<title>Animated Login Form</title>	
+	<title>Login Funcionario</title>	
 	<link rel="stylesheet" href="../css/style.css">
 
 
