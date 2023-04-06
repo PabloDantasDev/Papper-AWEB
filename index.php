@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +40,7 @@
 						<a id="servicosbtn" class="nav-link" href="#servicos">Serviços</a>
 					</li>
 					<li class="nav-item">
-						<a id="contatosbtn" class="btn btn-primary btn-contato nav-link" href="/views/loginFuncionario.php" role="button">Login</a>
+						<a id="contatosbtn" class="btn btn-primary btn-contato nav-link" href="views/loginFuncionario.php" role="button">Login</a>
 					</li>
 				</ul>
 			</div>

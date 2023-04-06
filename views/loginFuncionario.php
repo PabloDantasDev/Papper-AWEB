@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	
 	<title>Animated Login Form</title>	
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="../css/style.css">
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -17,7 +19,7 @@
 <body>
 	<div class="container">
 		<div class="img">
-			<img src="img/g1.png">
+			<img src="../img/g1.png">
 		</div>
 		<div class="login-content">
 			<form id="casdastro-form" method="post">
@@ -55,28 +57,8 @@
 
 <?php
 
-require('./database/conn.php');
+require('../database/conn.php');
 
-// Verifica se o formulário de login foi enviado
-if (isset($_POST['login'])) {
-	$username = strip_tags($_POST['username']);
-  	$password = strip_tags($_POST['password']);
-
-	// Consulta o banco de dados para verificar as credenciais do usuário
-	$sql = "SELECT * FROM usuarios WHERE nome='$username' AND senha='$password'";
-	$result = $conn->query($sql);
-
-  	if ($result->num_rows == 1) {
-		// Login bem-sucedido
-		echo "Login efetuado com sucesso!";
-		header('Location: views/home.php');
-  	} else {
-		// Login falhou
-		echo "Usuário ou senha inválidos.";
-	}
-}
-
-$conn->close();
 ?>
 
 </html>
