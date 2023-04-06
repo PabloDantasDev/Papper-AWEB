@@ -61,7 +61,7 @@ if (isset($_POST['cadastrar'])) {
         if ($result->num_rows == 1) {
           // se estiver corretos
           echo "Login efetuado com sucesso!";
-          header('Location: views/home.php');
+          header('Location: ../views/home.php');
         } else {
           // Se não existir
           echo "Usuário ou senha inválidos.";
