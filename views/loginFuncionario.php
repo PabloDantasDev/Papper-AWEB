@@ -22,7 +22,7 @@
 			<img src="../img/g1.png">
 		</div>
 		<div class="login-content">
-			<form id="casdastro-form" method="post">
+			<form id="casdastro-form" action="../database/valida.php" method="post">
 		
 
 
@@ -46,8 +46,8 @@
            		    	<input type="password" name="password" class="input">
             	   </div>
             	</div>
-            	<input type="submit" name="login"  value="Login">
-				<a href="database/cadastro.php">CADASTRE-SE</a>
+            	<input type="submit" class="btn" name="login"  value="Login">
+				
             </form>
         </div>
     </div>
