@@ -9,7 +9,7 @@ if (isset($_POST['reserva'])) {
 	$telReserva = strip_tags($_POST['telReserva']);
 
     // Insere o novo usuário no banco de dados
-    $sql = "INSERT INTO registro_mesas (num_mesa,nome_reserva,qtd_pessoas,tel_reserva) VALUES ('$nMesa', '$nomeReserva', '$qtdPessoas', '$telReserva')";
+    $sql = "INSERT INTO registro_mesas (num_mesa, nome_reserva, qtd_pessoas, tel_reserva) VALUES ('$nMesa', '$nomeReserva', '$qtdPessoas', '$telReserva')";
     if ($conn->query($sql) === TRUE) {
       echo "Usuário cadastrado com sucesso!";
 	  
@@ -17,10 +17,5 @@ if (isset($_POST['reserva'])) {
       echo "Erro ao cadastrar usuário: ";
     }
   }
-
-
-
-
-
 
 ?>

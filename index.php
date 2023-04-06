@@ -35,7 +35,7 @@ require('../Papper-AWEB/views/partials/header.php');
 	</div>
 	<div class="row">
 		<div class="col-sm-2">
-			<a href="#" class="btn btn-outline-dark btn-lg btn-block mb-3">Reserva</a>
+			<a href="views/reserva.php" class="btn btn-outline-dark btn-lg btn-block mb-3">Reserva</a>
 		</div>
 	</div>
 	<div class="row">
