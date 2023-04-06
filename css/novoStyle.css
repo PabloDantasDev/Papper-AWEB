@@ -16,4 +16,9 @@ img {
 .menu-botao{
     margin-top: 50px;
     margin-bottom: 80px;
+    text-align: center;
+}
+
+.sub-menu{
+    text-align: center;
 }
