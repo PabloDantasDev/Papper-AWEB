@@ -1,4 +1,5 @@
 <?php
+
 require('conn.php');
 
 // Verifica se o formulário de cadastro foi enviado
@@ -14,7 +15,7 @@ if (isset($_POST['reserva'])) {
       echo "Usuário cadastrado com sucesso!";
 	  
     } else {
-      echo "Erro ao cadastrar usuário: ";
+      echo "Erro ao cadastrar usuário: " . mysqli_error($conn);
     }
   }
 

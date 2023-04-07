@@ -17,20 +17,17 @@ if ($result) {
     $telReserva = $row['tel_reserva'];
  
   }
-} else {
-  // Display an error message if the query execution failed
-  echo "Ocorreu um erro na consulta SQL: " . mysqli_error($conn);
-}
+} 
 
 // Check if the form has been submitted
 if (isset($_POST['update'])) {
+
   // Get the form data
 
-  $id = $row['id'];
-  $nMesa = $row['num_mesa'];
-  $nomeReserva = $row['nome_reserva'];
-  $qtdPessoas = $row['qtd_pessoas'];
-  $telReserva = $row['tel_reserva'];
+  $nMesa = $_POST['nMesa'];
+  $nomeReserva = $_POST['nomeReserva'];
+  $qtdPessoas = $_POST['qtdPessoas'];
+  $telReserva = $_POST['telReserva'];
 
   // Update the corresponding row in the 'cadastro' table
   $sql = "UPDATE registro_mesas SET num_mesa='$nMesa', nome_reserva='$nomeReserva', qtd_pessoas='$qtdPessoas', tel_reserva='$telReserva' WHERE id=$id";
@@ -76,7 +73,7 @@ if (isset($_POST['update'])) {
 			<img src="../img/g1.png">
 		</div>
 		<div class="login-content">
-        <form id="casdastro-form" action="../database/reservaM.php" method="post">
+        <form id="casdastro-form" method="post">
 		
 
 
@@ -97,7 +94,7 @@ if (isset($_POST['update'])) {
               </div>
               <div class="div">
                    
-                   <input type="text" name="nomeReserva" placeholder="Nome Reserva" class="input">
+                   <input type="text" name="nomeReserva" value="<?php echo $nomeReserva ?>" placeholder="Nome Reserva" class="input">
            </div>
         </div>
         <div class="input-div pass">
@@ -106,7 +103,7 @@ if (isset($_POST['update'])) {
               </div>
               <div class="div">
                    
-                   <input type="text" name="qtdPessoas" placeholder="Qtd Pessoas" class="input">
+                   <input type="text" name="qtdPessoas" value="<?php echo $qtdPessoas ?>" placeholder="Qtd Pessoas" class="input">
            </div>
         </div>
         <div class="input-div pass">
@@ -115,7 +112,7 @@ if (isset($_POST['update'])) {
               </div>
               <div class="div">
                    
-                   <input type="text" name="telReserva" placeholder="Tel Reserva" class="input">
+                   <input type="text" name="telReserva"value="<?php echo $telReserva ?>" placeholder="Tel Reserva" class="input">
            </div>
         </div>
     
