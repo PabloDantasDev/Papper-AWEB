@@ -14,7 +14,7 @@ if (isset($_POST['reserva'])) {
       echo "Usuário cadastrado com sucesso!";
 	  
     } else {
-      echo "Erro ao cadastrar usuário: ";
+      echo "Erro ao cadastrar usuário: " . mysqli_error($conn);
     }
   }
 

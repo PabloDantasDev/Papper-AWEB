@@ -1,30 +1,30 @@
-*{
-	padding: 0;
-	margin: 0;
+body {
+    background-image: linear-gradient(to right, #222222, #222222, #6b4904) !important;
+    color: white;
 }
 
-img {
-    width: auto; 
-    max-height: 100%; 
-   }
-
-.logo-principal{
-    margin-top: 80px;
-    height: 300px;
+.navbar {
+    background-image: linear-gradient(to right, #222222, #222222, #6b4904) !important;
 }
 
-.menu-botao{
-    margin-top: 50px;
-    margin-bottom: 80px;
-<<<<<<< HEAD
-    text-align: center;
+.img-principal {
+    margin-top: 0px;
+    
 }
 
-.sub-menu{
-    text-align: center;
-}
-=======
+a {
+    text-decoration: none !important;
 }
 
+.submenu {
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+}
 
->>>>>>> 54d8efe698603449b58a4467473924f6f2d2f17a
+.link-submenu{
+    color: #6b4904 !important;
+}
+
+.link-texto {
+    color: white !important;
+}
