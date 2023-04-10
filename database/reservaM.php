@@ -14,7 +14,7 @@ if (isset($_POST['reserva'])) {
 
         // Verifica se os campos nMesa, qtdPessoas e telReserva contêm apenas números
         if (!is_numeric($nMesa) || !ctype_digit($nMesa)) {
-            echo "<script>alert('Hey,, para que possamos providenciar o melhor lugar para você, poderia inserir o número da mesa desejada? Obrigado!');window.location.replace(document.referrer);</script>";
+            echo "<script>alert('Hey,, para que possamos providenciar,o melhor lugar para você, poderia inserir o número da mesa desejada? Obrigado!');window.location.replace(document.referrer);</script>";
             exit();
         }
         if (!is_numeric($qtdPessoas) || !ctype_digit($qtdPessoas)) {
