@@ -92,8 +92,8 @@ if (mysqli_num_rows($resultado) > 0) {
           text-decoration:none;
         }
       </style>
-      <button class="btn btn-warning  " ><a href="conexao/update.php?updateid='.$id.'""  class="text-light">EDITAR </a></button>
-      <button class="btn btn-danger"><a href="conexao/delete.php?deleteid='.$id.'""  class="text-light">DELETAR</a></button>
+      <button class="btn btn-warning  " ><a href="../actions/update.php?updateid='.$id.'""  class="text-light">EDITAR </a></button>
+      <button class="btn btn-danger"><a href="../actions/delete.php?deleteid='.$id.'""  class="text-light">DELETAR</a></button>
       </td>
     </tr>';
 

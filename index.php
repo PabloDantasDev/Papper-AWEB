@@ -22,15 +22,20 @@ require('../Papper-AWEB/views/partials/header.php');
 ?>
 
 <main>
-	<div class="container">
-		<div style="text-align: center;">
-			<div class="col-sm">
-				<img class="img-principal" src="img/logoxibenacuia1.fw.png">
-				<h2>Seja Bem-vindo!</h2>
-				<p>
-					O xibé é uma mistura de água com farinha de mandioca que pode ser degustado puro ou com pirarucu e outros peixes, fritos ou assados, como também aqui onde preparamos uma variedade de saboras e combinações com o xibé.
-				</p>
-			</div>
+	<div class="text-center">
+		<div class="logo-principal">
+			<img src="img/g1.png">
+		</div>
+		<h2>
+		Texto em destaque aqui a baixo da imagem!
+		</h2>
+		<p>
+			Texto falando um pouco sobre o nosso restaurante!
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<a href="#" class="btn btn-outline-dark btn-lg btn-block mb-3">Reserva</a>
 		</div>
 	</div>
 	<div class="submenu">
