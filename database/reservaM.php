@@ -1,7 +1,7 @@
 <?php
 
 require('conn.php');
-require('conn.php');
+
 
 // Verifica se o formulário de cadastro foi enviado
 if (isset($_POST['reserva'])) {

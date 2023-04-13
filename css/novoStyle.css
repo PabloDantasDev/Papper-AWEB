@@ -9,7 +9,13 @@ body {
 
 .img-principal {
     margin-top: 0px;
-    
+ 
+}
+
+.logo-principal img {
+  height: 500px;
+  width: 500px;
+ 
 }
 
 a {

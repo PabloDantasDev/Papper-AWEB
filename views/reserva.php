@@ -3,18 +3,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<title>RESERVA</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/novoStyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="../img/logoxibenacuia1.fw.png" type="image/x-icon">
+
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-	<img class="wave" src="../img/wave.png">
+	
+
 	<div class="container">
 		<div class="img">
-			<img src="../img/g1.png">
+			<img src="../img/logoxibenacuia1.fw.png">
 		</div>
 		<div class="login-content">
 			<form id="casdastro-form" action="../database/reservaM.php" method="post">
