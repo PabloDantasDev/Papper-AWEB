@@ -33,7 +33,7 @@ require('../Papper-AWEB/views/partials/header.php');
 	
 	<div class="submenu">
 	<p class="col-sm-4 mx-auto">
-		<a href="views/reserva.php" class="btn btn-outline-light btn-lg btn-block link-submenu">Reservas</a>
+		<a href="views/reserva.php" class="btn btn-outline-light btn-lg btn-block link-submenu">Fazer Reservas</a>
 	</p>
 	<p class="col-sm-4 mx-auto">
 		<a href="views/reserva.php" class="btn btn-outline-light btn-lg btn-block link-submenu">Cardápio Digital</a>
