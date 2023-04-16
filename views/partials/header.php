@@ -13,7 +13,7 @@
 						<a class="nav-link" href="/">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#sobre">Sobre</a>
+						<a class="nav-link" href="views\sobre.php">Sobre</a>
 					</li>
 					<li class="nav-item">
 						<a id="servicosbtn" class="nav-link" href="#servicos">Serviços</a>
