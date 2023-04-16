@@ -34,7 +34,7 @@
            		   </div>
            		   <div class="div">
            		  
-           		   		<input type="text" name="nMesa" placeholder="Numero da Mesa" class="input">
+           		   		<input type="text"  name="nMesa" placeholder="Numero da Mesa" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">

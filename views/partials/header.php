@@ -14,11 +14,10 @@
 						<a class="nav-link" href="index.php">Home</a>
 					</li>
 					<li class="nav-item">
-<<<<<<< HEAD
 						<a class="nav-link" href="views\sobre.php">Sobre</a>
-=======
-						<a class="nav-link" href="#">Sobre</a>
->>>>>>> ed97f6d14ddf3611c5f665b3b6a24d04d92623d2
+
+						
+
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="views/loginFuncionario.php">Login</a>
