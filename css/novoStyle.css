@@ -1,27 +1,43 @@
-*{
-	padding: 0;
-	margin: 0;
+body {
+    background-image: linear-gradient(to right, #222222, #222222, #6b4904) !important;
+    color: white;
 }
 
-img {
-    width: auto; 
-    max-height: 100%; 
-   }
-
-.logo-principal{
-    margin-top: 80px;
-    height: 300px;
+.navbar {
+    background-image: linear-gradient(to right, #222222, #222222, #6b4904) !important;
 }
 
-.menu-botao{
-    margin-top: 50px;
-    margin-bottom: 80px;
-    text-align: center;
+.img-principal {
+    margin-top: 0px;
+ 
 }
 
-.sub-menu{
-    text-align: center;
+.logo-principal img {
+  height: 500px;
+  width: 500px;
+ 
 }
 
+a {
+    text-decoration: none !important;
+}
+<<<<<<< HEAD
+=======
 
+.submenu {
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+}
+>>>>>>> ed97f6d14ddf3611c5f665b3b6a24d04d92623d2
 
+.link-submenu{
+    color: #6b4904 !important;
+}
+
+<<<<<<< HEAD
+
+=======
+.link-texto {
+    color: white !important;
+}
+>>>>>>> ed97f6d14ddf3611c5f665b3b6a24d04d92623d2

@@ -61,23 +61,24 @@ if (isset($_POST['update'])) {
 <head>
 	<title>Animated Login Form</title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/Novostyle.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-	<img class="wave" src="../img/wave.png">
+	<img class="wave" src="../img/logoxibenacuia1.fw.png">
 	<div class="container">
 		<div class="img">
-			<img src="../img/g1.png">
+			
 		</div>
 		<div class="login-content">
         <form id="casdastro-form" method="post">
 		
 
 
-        <h3 class="title">FAÇA SUA RESERVA</h3>
+        <h3 class="title">EDITAR RESERVA</h3>
 
            <div class="input-div one">
               <div class="i">
@@ -118,7 +119,7 @@ if (isset($_POST['update'])) {
     
 
         
-        <input type="submit" class="btn" name="update"  value="RESERVAR">
+        <input type="submit" class="btn" name="update"  value="ALTERAR">
   
         
     </form>

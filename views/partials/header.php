@@ -1,8 +1,9 @@
+
 <header>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
 		<div class="container">
 			<a class="navbar-brand p-3" href="/">
-				<img src="caminho-da-img" alt="logo">
+				<h4>Xibé na Cuia</h4>
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
 				<span class="navbar-toggler-icon"></span>
@@ -10,16 +11,17 @@
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link" href="index.php">Home</a>
 					</li>
 					<li class="nav-item">
+<<<<<<< HEAD
 						<a class="nav-link" href="views\sobre.php">Sobre</a>
+=======
+						<a class="nav-link" href="#">Sobre</a>
+>>>>>>> ed97f6d14ddf3611c5f665b3b6a24d04d92623d2
 					</li>
 					<li class="nav-item">
-						<a id="servicosbtn" class="nav-link" href="#servicos">Serviços</a>
-					</li>
-					<li class="nav-item">
-						<a id="contatosbtn" class="btn btn-primary btn-contato nav-link" href="views/loginFuncionario.php" role="button">Login</a>
+						<a class="nav-link" href="views/loginFuncionario.php">Login</a>
 					</li>
 				</ul>
 			</div>
