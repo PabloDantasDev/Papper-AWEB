@@ -37,8 +37,7 @@ if (isset($_POST['reserva'])) {
             // Exibe uma mensagem de aviso com um botão "OK" e redireciona para a página anterior
             echo "<script>alert('Erro ao cadastrar usuário: " . mysqli_error($conn) . "');window.location.replace(document.referrer);</script>";
         }
-    } else {
-      echo "Erro ao cadastrar usuário: ";
+   
     }
 }
 ?>
