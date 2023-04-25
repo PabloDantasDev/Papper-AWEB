@@ -24,25 +24,25 @@
 				<div class="input-div one">
 					<div class="i"></div>
 					<div class="div">
-						<input type="text" name="nMesa" placeholder="Numero da Mesa" class="input" pattern="[0-9]+">
+						<input type="text" name="nMesa" placeholder="Numero da Mesa" class="input" pattern="[0-9]+" required>
+					</div>
+				</div>
+				<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+							<input type="text" name="nomeReserva" placeholder="Nome Reserva" class="input" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required>
+						</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i"></div>
+					<div class="div">
+						<input type="text" name="qtdPessoas" placeholder="Qtd Pessoas" class="input" pattern="[0-9]+" required>
 					</div>
 				</div>
 				<div class="input-div pass">
 					<div class="i"></div>
 					<div class="div">
-						<input type="text" name="nomeReserva" placeholder="Nome Reserva" class="input" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+">
-					</div>
-				</div>
-				<div class="input-div pass">
-					<div class="i"></div>
-					<div class="div">
-						<input type="text" name="qtdPessoas" placeholder="Qtd Pessoas" class="input" pattern="[0-9]+">
-					</div>
-				</div>
-				<div class="input-div pass">
-					<div class="i"></div>
-					<div class="div">
-						<input type="text" name="telReserva" placeholder="Tel Reserva" class="input" pattern="[0-9]+">
+						<input type="text" name="telReserva" placeholder="Tel Reserva" class="input" pattern="[0-9]+" required>
 					</div>
 				</div>
 
