@@ -70,6 +70,13 @@ form{
 .login-content .input-div.one{
 	margin-top: 0;
 }
+::placeholder{
+	color: #fffefd;
+}
+.btn-custom {
+    color: white;
+    font-weight: bold;
+}
 
 .i{
 	color: #d9d9d9;

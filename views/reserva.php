@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+
 	<title>RESERVA</title>
+	
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/novoStyle.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 
 	<link rel="shortcut icon" href="../img/logoxibenacuia1.fw.png" type="image/x-icon">
@@ -11,8 +14,8 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-
+<body style="background-image: url('../img/reserva.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+		
 	<div class="container">
 		<div class="img">
 			<img src="../img/logoxibenacuia1.fw.png">

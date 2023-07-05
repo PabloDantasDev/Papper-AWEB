@@ -1,5 +1,5 @@
 <footer>
 	<div class="text-center">
-		<p>Xibé na Cuia</p>
+		<p class="text-center white-text">Xibé na Cuia</p>
 	</div>
 </footer>

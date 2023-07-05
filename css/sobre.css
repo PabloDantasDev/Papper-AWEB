@@ -1,10 +1,14 @@
 #garcon{
-    height: 400px;
-    min-height: 400px;
+    /* height: 400px;
+    min-height: 400px; */
     display: block;
     margin: auto;
+    width: 80%;
 }
-/*  */
+.div-centro {
+    display: flex; 
+    justify-content: center;
+}
 .descricao{
     text-indent: 50px;
 }

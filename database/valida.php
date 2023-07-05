@@ -3,21 +3,12 @@
 require('conn.php');
 
 if (isset($_POST['fLogin'])) {
-
-
   header('Location: ../index.php');
-
 }
-
-
 
 if (isset($_POST['cadastro'])) {
-
-
   header('Location: views/cadastro.php');
-
 }
-
 
 // Verifica se o formulário de cadastro foi enviado
 if (isset($_POST['cadastrar'])) {
@@ -31,21 +22,16 @@ if (isset($_POST['cadastrar'])) {
   if ($result->num_rows > 0) {
     // Usuário já cadastrado
     echo "Usuário já cadastrado.";
-
   } else {
     // Insere o novo usuário no banco de dados
     $sql = "INSERT INTO usuarios (nome,senha) VALUES ('$username', '$password')";
     if ($conn->query($sql) === TRUE) {
       echo "Usuário cadastrado com sucesso!";
-
     } else {
       echo "Erro ao cadastrar usuário: ";
     }
   }
 }
-
-
-
 
 if (isset($_POST['login'])) {
   $username = strip_tags($_POST['username']);
@@ -70,4 +56,3 @@ if (isset($_POST['login'])) {
   $stmt->close();
 }
 $conn->close();
-?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +8,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/sobre.css">
     <link rel="stylesheet" href="../css/novoStyle.css">
+    
     <title> Sobre </title>
 </head>
 <body>
+    
     <div class="container">
         <!-- HEADER -->
         <section class="row ">
-            <div class="col-md-6">
+            <div class="col-md-6 div-centro">
                 <img src="../img/garcon.jpg" class="text-center" id="garcon" alt="" srcset="">
             </div>
             <div class="col-md-6">
                 <h1 class="text-right">Desde 1998</h1>
-                <p class="text-justify descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elementum risus id eros egestas placerat. Maecenas est nibh, blandit nec consequat id, vehicula at odio. Quisque nec lorem libero. Duis maximus vel sem ut laoreet. Sed elementum magna eget ipsum efficitur, eu venenatis magna interdum. Phasellus bibendum tortor diam, et convallis tellus pulvinar in. Vestibulum malesuada enim augue, a sollicitudin leo varius ac. Suspendisse venenatis placerat ipsum ultricies vehicula. Nulla aliquet magna ac rhoncus condimentum. Cras quam turpis, facilisis ac molestie et, luctus id urna. Nunc vulputate quam lorem, non luctus elit malesuada id.</p>
+                <p class="text-justify descricao">
+                Bem-vindo ao Xibé na Cuia! Somos um restaurante familiar que se orgulha de servir deliciosas refeições há mais de duas décadas. Desde a nossa inauguração em 1998, temos nos esforçado para oferecer aos nossos clientes uma experiência gastronômica única e memorável.
+                </p>
+                <p class="text-justify descricao">
+                No Xibé na Cuia, acreditamos que a comida vai além do simples prazer de saborear; ela é uma forma de celebrar a vida. Nossa equipe de talentosos chefs trabalha arduamente para criar pratos saborosos e autênticos, inspirados na rica culinária brasileira e regional. Do tradicional churrasco ao nosso famoso xibé, uma iguaria amazônica única, cada mordida é uma explosão de sabores que aquecem o coração.
+                <p class="text-justify descricao">
+                Além de nossa incrível gastronomia, oferecemos um ambiente acolhedor e familiar, perfeito para compartilhar momentos especiais com seus entes queridos. Com nossas instalações espaçosas, estamos prontos para sediar diversos tipos de eventos, desde festas de aniversário até festas de casamento. Nossa equipe dedicada está pronta para ajudá-lo a planejar e executar o evento dos seus sonhos.
+                </p>
+                <p class="text-justify descricao">
+                No Xibé na Cuia, a satisfação do cliente é nossa prioridade. Valorizamos cada pessoa que entra por nossas portas e fazemos o possível para oferecer um serviço impecável. Seja você um cliente frequente ou esteja nos visitando pela primeira vez, queremos que se sinta bem-vindo e desfrute de uma experiência verdadeiramente excepcional.
+                </p>
+                <p class="text-justify descricao">
+                Venha nos visitar e deixe-nos encantar você com nossa comida deliciosa, ambiente acolhedor e eventos memoráveis. Estamos ansiosos para servi-lo e tornar sua visita conosco uma ocasião inesquecível.
+                </p>
             </div>
         </section>
         <!-- CARDS -->
